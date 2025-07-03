@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bin Status - Trash2Cash</title>
+    <link href="https://fonts.googleapis.com/css2?family=Atomic+Age&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.jpg" alt="Trash2Cash Logo">
+            <span>TRASH2CASH</span>
+        </div>
+        <ul class="nav-links">
+            <li class="dropdown">
+                <a href="#">HOME</a>
+                <ul class="dropdown-menu">
+                    <li><a  href="dashboard.html">Dashboard</a></li>
+                    <li><a  href="profile1.html">Profile</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">ABOUT</a>
+                <ul class="dropdown-menu">
+                    <li><a href="joinus.html">Join Us</a></li>
+                    <li><a href="mission.html">Our Mission</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">SERVICES</a>
+                <ul class="dropdown-menu">
+                    <li><a href="recycle.html">Recycling</a></li>
+                    <li><a href="rewards.html">Rewards</a></li>
+                    <li><a href="bin_location.html">Bin Location</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    
+    <div class="bin-status-container">
+        <h1>Bin Status: <span style="color: green;">EMPTY</span></h1>
+        <p>You can dispose of your waste in the respective containers:</p>
+        <ul id="waste-list"></ul>
+        <button onclick="goBack()">Check for Rewards</button>
+        <button onclick="goToHome()" style="margin-left: 10px;">Go Back to Home</button>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let selectedWaste = JSON.parse(localStorage.getItem("selectedWaste")) || [];
+            let wasteList = document.getElementById("waste-list");
+
+            if (selectedWaste.length > 0) {
+                selectedWaste.forEach(waste => {
+                    let li = document.createElement("li");
+                    li.textContent = waste;
+                    wasteList.appendChild(li);
+                });
+            } else {
+                wasteList.innerHTML = "<li>No waste selected</li>";
+            }
+        });
+
+        function goBack() {
+            window.location.href = "rewards.html";
+        }
+
+        function goToHome() {
+            window.location.href = "index.html"; // Make sure this is your homepage filename
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Area</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="profile-container">
+        <div class="profile-card">
+            <div class="profile-header">
+                <!-- <img src="logo.png" alt="Recycle Background" class="background-img"> -->
+                <div class="profile-pic">
+                    <!-- <img src="profile.png" alt="User Profile"> -->
+                </div>
+            </div>
+ <!-- <script>
+            <div class="profile-info">
+                
+                document.addEventListener("DOMContentLoaded", function() {
+                    let username = localStorage.getItem("username");
+                    if (username) {
+                        document.getElementById("displayUsername").textContent = username;
+                    } else {
+                        document.getElementById("displayUsername").textContent = "Guest"; // Fallback if no username is found
+                    } -->
+                <!-- }); </script> -->
+                <h2 id="username">john</h2>
+                <p><strong>ID:</strong> <span id="userID">#123456</span></p>
+                <p><strong>Rewards Earned:</strong> <span id="rewards">250 Points</span></p>
+            </div>
+
+            <div class="rewards-section">
+                <h3>Recycling Rewards</h3>
+                <ul>
+                    <li>✅ 10 Plastic Bottles - 10 Points</li>
+                    <li>✅ 5 Aluminum Cans - 5 Points</li>
+                    <li>✅ 2 Glass Bottles - 8 Points</li>
+                    <li>✅ 1 kg Paper Waste - 7 Points</li>
+                    <li>✅ 1 kg E-Waste - 20 Points</li>
+                </ul>
+            </div>
+            <button onclick="history.back()" style="
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #d9534f;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;">
+    ← Go Back
+</button>
+        </div>
+    </div>
+
+</body>
+</html>

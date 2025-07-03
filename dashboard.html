@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Trash2Cash</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+        .dashboard {
+            display: flex;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 250px;
+            background: rgb(0, 128, 0);
+            color: white;
+            padding: 20px;
+        }
+        .sidebar h2 {
+            text-align: center;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 15px;
+            cursor: pointer;
+        }
+        .sidebar ul li:hover {
+            background: #34495E;
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .stats {
+            display: flex;
+            justify-content: space-between;
+        }
+        .leaderboard {
+            margin-top: 20px;
+        }
+        .leaderboard h2 {
+            text-align: center;
+            color: #2c7a2c;
+        }
+        .leaderboard-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .leaderboard-table th, .leaderboard-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        .leaderboard-table th {
+            background: #2c7a2c;
+            color: white;
+        }
+        button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #d9534f;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <h2>Dashboard</h2>
+            <ul>
+                <li>Overview</li>
+                <li>Waste Stats</li>
+                <li>Rewards</li>
+                <li>Settings</li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <h1>Welcome to Your Dashboard</h1>
+            <div class="stats">
+                <div class="card">Total Waste Deposited: 95kg</div>
+                <div class="card">Rewards Earned: 250</div>
+            </div>
+            <div class="card">
+                <h2>Recent Activity</h2>
+                <p>Last Waste Disposed: Plastic Bottles (5kg) - 2 hours ago</p>
+            </div>
+            <div class="card">
+                <p>Last Waste Disposed: Biowaste (10kg) - 2 days ago</p>
+            </div>
+
+            <!-- Leaderboard Section -->
+            <div class="card leaderboard">
+                <h2>Leaderboard - Top Recyclers</h2>
+                <table class="leaderboard-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Name</th>
+                            <th>Waste Recycled (kg)</th>
+                            <th>Points Earned</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Alice Johnson</td>
+                            <td>120kg</td>
+                            <td>300</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>john</td>
+                            <td>95kg</td>
+                            <td>250</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Mary Lee</td>
+                            <td>80kg</td>
+                            <td>200</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>James Brown</td>
+                            <td>65kg</td>
+                            <td>180</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Sophia Kim</td>
+                            <td>50kg</td>
+                            <td>150</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <button onclick="history.back()">← Go Back</button>
+        </div>
+    </div>
+</body>
+</html>

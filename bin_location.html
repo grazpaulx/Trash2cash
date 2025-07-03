@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bin Locations - Trash2Cash</title>
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCF5G-G179lAa0PqLtQ5uRscAOAjm5omuo&callback=initMap"></script>
+</head>
+<body>
+    <h1>Bin Locations in Singapore</h1>
+    <div id="map"></div>
+    <button onclick="history.back()" style="
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #d9534f;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;">
+    ← Go Back
+</button>
+
+    <script>
+        function initMap() {
+            var singapore = { lat: 1.3521, lng: 103.8198 };
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 12,
+                center: singapore,
+            });
+
+            var locations = [
+                { lat: 1.290270, lng: 103.851959 }, // Example: Marina Bay
+                { lat: 1.352083, lng: 103.819839 }, // Example: Central Singapore
+                { lat: 1.377621, lng: 103.805474 }  // Example: Another Bin Location
+            ];
+
+            locations.forEach((location) => {
+                new google.maps.Marker({
+                    position: location,
+                    map: map,
+                    title: "Recycling Bin Location"
+                });
+            });
+        }
+    </script>
+</body>
+</html>

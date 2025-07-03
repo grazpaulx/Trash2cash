@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trash2Cash</title>
+    <link rel="icon" type="C:\Users\grace\Downloads\WhatsApp Image 2025-02-25 at 10.15.10_011094df.jpg" href ="favicon.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Atomic+Age&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+ 
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.jpg" alt="Trash2Cash Logo">
+            <span>TRASH2CASH</span>
+        </div>
+        <ul class="nav-links">
+            <li class="dropdown">
+                <a href="#">HOME</a>
+                <ul class="dropdown-menu">
+                    <li><a  href="dashboard.html">Dashboard</a></li>
+                    <li><a  href="profile1.html">Profile</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">ABOUT</a>
+                <ul class="dropdown-menu">
+                    <li><a href="joinus.html">Join Us</a></li>
+                    <li><a href="mission.html">Our Mission</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">SERVICES</a>
+                <ul class="dropdown-menu">
+                    <li><a href="recycle.html">Recycling</a></li>
+                    <li><a href="rewards.html">Rewards</a></li>
+                    <li><a href="bin_location.html">Bin Location</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    
+
+    <div class="hero">
+        <div class="moving-flag">
+            <img src="singapore-flag.gif" alt="Singapore Flag">
+        </div>
+        <div class="hero-text">
+            <h1>♻ Recycling &<br>Reward Focused</h1>
+            <p>Turn Your Trash into Treasure!<br>Recycle Smart, Earn Rewards!<br>Waste Less, Earn More!</p>
+        </div>
+        <div class="signin-container">
+            <h2>SIGN IN</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+
+            <button onclick="signIn()">SIGN IN</button>
+            <p><a href="#">Forgot password?</a></p>
+        </div>
+        <!-- <script>
+    function saveUsername() {
+        let username = document.getElementById("usernameInput").value;
+        localStorage.setItem("username", username); // Store in localStorage
+        window.location.href = "profile.html"; // Redirect to profile page
+    }
+</script> -->
+    </div>
+    <footer>
+        <div class="footer-content">
+            <img src="left-image.jpg" alt="Left Image" class="footer-image left">
+            <video id="footer-video" autoplay loop muted>
+                <source src="singapore.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <img src="right-image.jpeg" alt="Right Image" class="footer-image right">
+        </div>
+    </footer>
+    <!-- <div class="dashboard-container">
+        <h2>Dashboard</h2>
+        <p>Waste Deposited: 5kg</p>
+        <p>Reward Points: 50</p>
+        <button onclick="location.href='profile.html'">Back to Profile</button>
+    </div>
+     -->
+    
+    <script src="script.js"></script>
+</body>
+</html>

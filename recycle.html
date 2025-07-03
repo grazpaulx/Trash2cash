@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recycling - Trash2Cash</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+        h1 {
+            color: #2c7a2c;
+        }
+        .challenge-box, .facts-box {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .challenge-item, .fact-item {
+            background: #2c7a2c;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 200px;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .challenge-item:hover, .fact-item:hover {
+            transform: scale(1.1);
+            background: #1e5a1e;
+        }
+        .footer {
+            background: black;
+            color: white;
+            padding: 20px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Recycling & Challenges</h1>
+        <p>Take part in our exciting recycling challenges and learn new facts!</p>
+        
+        <h2>Challenges</h2>
+        <div class="challenge-box">
+            <div class="challenge-item">7-Day Zero Plastic</div>
+            <div class="challenge-item">Eco-Friendly Home</div>
+            <div class="challenge-item">Upcycling Contest</div>
+            <div class="challenge-item">Community Clean-Up</div>
+        </div>
+
+        <h2>Interesting Facts</h2>
+        <div class="facts-box">
+            <div class="fact-item">Recycling 1 aluminum can saves enough energy to run a TV for 3 hours!</div>
+            <div class="fact-item">Plastic takes over 500 years to decompose in landfills.</div>
+            <div class="fact-item">Recycling one ton of paper saves 17 trees!</div>
+            <div class="fact-item">Glass can be recycled indefinitely without losing quality.</div>
+        </div>
+        <button onclick="history.back()" style="
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #d9534f;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;">
+    ← Go Back
+</button>
+    </div>
+
+    <div class="footer">
+        <h2>Advertisements</h2>
+        <p>Check out these sustainable products available in Singapore!</p>
+        <img src="eco_product3.jpeg" alt="Sustainable Product 1" width="150">
+        <img src="eco_product2.jpeg" alt="Sustainable Product 2" width="150">
+    </div>
+</body>
+</html>

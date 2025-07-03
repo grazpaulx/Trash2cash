@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trash2Cash - Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Atomic+Age&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+        <nav class="navbar">
+            <div class="logo">
+                <img src="logo.jpg" alt="Trash2Cash Logo">
+                <span>TRASH2CASH</span>
+            </div>
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="#">HOME</a>
+                    <ul class="dropdown-menu">
+                        <li><a  href="dashboard.html">Dashboard</a></li>
+                        <li><a  href="profile1.html">Profile</a></li>
+                    </ul>
+                </li>
+    
+                <li class="dropdown">
+                    <a href="#">ABOUT</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="joinus.html">Join Us</a></li>
+                        <li><a href="mission.html">Our Mission</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">SERVICES</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="recycle.html">Recycling</a></li>
+                        <li><a href="rewards.html">Rewards</a></li>
+                        <li><a href="bin_location.html">Bin Location</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+
+    <div class="profile-container">
+        <h1>Welcome, <span id="user-name"></span>!</h1>
+        <p>Thanks for signing in to Trash2Cash. Start recycling and earning rewards now!</p>
+        <!-- <div class="waste-selection">
+            <h2>Select Waste Type</h2>
+            <select id="waste-type">
+                <option value="bio">Bio Waste</option>
+                <option value="plastic">Plastic Waste</option>
+                <option value="paper">Paper Waste</option>
+                <option value="metal">Metal Waste</option>
+                <option value="ewaste">E-Waste</option>
+            </select>
+            <button onclick="submitWaste()">Submit</button>
+        </div> -->
+
+          <!-- Waste Selection Box -->
+          <div class="waste-selection">
+            <h2>Select Waste Types</h2>
+            <ul class="waste-list">
+                <li><input type="checkbox" id="bio" value="Bio Waste"> <label for="bio">Bio Waste</label></li>
+                <li><input type="checkbox" id="plastic" value="Plastic Waste"> <label for="plastic">Plastic Waste</label></li>
+                <li><input type="checkbox" id="paper" value="Paper Waste"> <label for="paper">Paper Waste</label></li>
+                <li><input type="checkbox" id="metal" value="Metal Waste"> <label for="metal">Metal Waste</label></li>
+                <li><input type="checkbox" id="ewaste" value="E-Waste"> <label for="ewaste">E-Waste</label></li>
+            </ul>
+            <button onclick="submitWaste()">Submit</button>
+        </div>
+
+        <button onclick="logout()">LOGOUT</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const user = localStorage.getItem("user");
+            if (!user) {
+                window.location.href = "index.html"; // Redirect if not logged in
+            } else {
+                document.getElementById("user-name").innerText = user;
+            }
+        });
+
+        function logout() {
+            localStorage.removeItem("user");
+            window.location.href = "index.html";
+        }
+
+    // function submitWaste() {
+    //         let selectedWaste = [];
+    //         document.querySelectorAll('.waste-list input:checked').forEach((item) => {
+    //             selectedWaste.push(item.value);
+    //         });
+
+    //         if (selectedWaste.length === 0) {
+    //             alert("Please select at least one waste type.");
+    //         } else {
+    //             alert("You have selected: " + selectedWaste.join(", "));
+    //         }
+    //     }
+    function submitWaste() {
+    let selectedWaste = [];
+    document.querySelectorAll('.waste-list input:checked').forEach((item) => {
+        selectedWaste.push(item.value);
+    });
+
+    if (selectedWaste.length === 0) {
+        alert("Please select at least one waste type.");
+    } else {
+        localStorage.setItem("selectedWaste", JSON.stringify(selectedWaste)); // Store selected waste
+        window.location.href = "bin-status.html"; // Redirect to bin status page
+    }
+}
+
+    </script>
+
+</body>
+</html>

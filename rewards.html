@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rewards - Trash2Cash</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .rewards-container {
+            width: 80%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+        h1 {
+            color: #2c7a2c;
+        }
+        .reward-box {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .reward-item {
+            background: #2c7a2c;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 200px;
+            text-align: center;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .reward-item:hover {
+            transform: scale(1.1);
+            background: #1e5a1e;
+        }
+        .footer {
+            background: black;
+            color: white;
+            padding: 20px;
+            margin-top: 50px;
+        }
+        .ads-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .ad-item {
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            width: 250px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        .ad-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="rewards-container">
+        <h1>Earn Rewards with Trash2Cash!</h1>
+        <p>Recycle and earn amazing rewards. Choose from the options below:</p>
+        <div class="reward-box">
+            <div class="reward-item">Discount Coupons</div>
+            <div class="reward-item">Gift Cards</div>
+            <div class="reward-item">Cashbacks</div>
+            <div class="reward-item">Eco-friendly Products</div>
+            <div class="reward-item">Exclusive Deals</div>
+        </div>
+        <button onclick="history.back()" style="
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: #d9534f;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;">
+        ← Go Back
+    </button>
+    </div>
+
+    <footer class="footer">
+        <h1>ECO-BUY  </h1>
+        <div class="ads-container">
+            <div class="ad-item">
+                <img src="eco_product1.jpg" alt="Eco-Friendly Product 1">
+                <p>Reusable Bamboo Straws - Save the planet!</p>
+            </div>
+            <div class="ad-item">
+                <img src="eco_product2.jpeg" alt="Eco-Friendly Product 2">
+                <p>Solar-Powered Gadgets - Energy-efficient and green!</p>
+            </div>
+            <div class="ad-item">
+                <img src="eco_product3.jpeg" alt="Eco-Friendly Product 3">
+                <p>Biodegradable Bags - Say no to plastic waste!</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
